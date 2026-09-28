@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apply | WeekendBio Scholarship</title>
+  <meta name="description" content="Apply for the WeekendBio Accelerated Academic Award Scholarship. Name, class year, email, and a ten-word essay are required.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="apply.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <div class="notice">
+    <div class="wrap">2026–27 applications are open through December 31, 2026.</div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="17" fill="#1a4d8f"/><circle cx="18" cy="18" r="11.5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="18" cy="18" r="5" fill="#5cb96f"/></svg>
+        <span class="brand-text">
+          <span class="brand-name">Weekend<span>Bio</span></span>
+          <span class="brand-sub">Scholarship Program</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="essay.html">The Essay</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a class="nav-apply" href="apply.html" aria-current="page">Apply</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-head">
+      <div class="wrap">
+        <p class="kicker">2026–27 Application</p>
+        <h1>Apply for the Accelerated Academic Award Scholarship</h1>
+        <p class="lede">The application asks for your name, your class year, your email address, and an essay of at least ten words. Read the <a href="essay.html">essay requirements</a> before you begin. All fields are required.</p>
+      </div>
+    </div>
+
+    <div class="wrap content-layout">
+      <div>
+        <form id="application" class="application" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="New application: Accelerated Academic Award Scholarship">
+          <div class="hp" aria-hidden="true">
+            <label>Leave this field empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <fieldset class="form-part">
+            <legend><span class="part-num">Part 1 of 3</span>Applicant information</legend>
+
+            <div class="field">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error">
+              <p class="error" id="name-error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="class_of">Class of</label>
+              <p class="hint" id="class_of-hint">The year you expect to graduate from the school you currently attend.</p>
+              <select id="class_of" name="class_of" required aria-describedby="class_of-hint class_of-error">
+                <option value="">Select a year</option>
+                <option>2026</option>
+                <option>2027</option>
+                <option>2028</option>
+                <option>2029</option>
+                <option>2030</option>
+                <option>2031</option>
+                <option>2032</option>
+                <option>2033</option>
+              </select>
+              <p class="error" id="class_of-error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="email">Email address</label>
+              <p class="hint" id="email-hint">If you are selected, this is how the committee will contact you.</p>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-hint email-error">
+              <p class="error" id="email-error" hidden></p>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-part form-part-essay">
+            <legend><span class="part-num">Part 2 of 3</span>The Ten-Word Essay</legend>
+
+            <div class="prompt">
+              <p class="prompt-label">Prompt</p>
+              <p class="prompt-text">In ten words or more, describe the future you are working toward.</p>
+            </div>
+
+            <div class="callout">
+              <p><strong>Minimum ten words. No exceptions.</strong>An essay under ten words is disqualified immediately and will not be read.</p>
+            </div>
+
+            <ul class="essay-rules">
+              <li>There is no maximum length, but longer essays do not score higher for being longer.</li>
+              <li>Hyphenated words, contractions, and numbers count as one word each.</li>
+              <li>No title. Everything in the box below counts toward your total.</li>
+              <li>Your essay cannot be changed after you submit.</li>
+            </ul>
+
+            <div class="field">
+              <label for="essay">Your essay</label>
+              <textarea id="essay" name="essay" rows="4" required spellcheck="true" aria-describedby="essay-count essay-error"></textarea>
+              <div class="counter">
+                <div class="meter" id="essay-meter" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <p class="count" id="essay-count">0 of 10 required words</p>
+              </div>
+              <p class="error" id="essay-error" hidden></p>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-part">
+            <legend><span class="part-num">Part 3 of 3</span>Certification</legend>
+
+            <div class="check">
+              <input type="checkbox" id="certify" name="certify_original" value="yes" required aria-describedby="certify-error">
+              <div class="check-body">
+                <label for="certify">I certify that this essay is my own original work, written without help from another person or an AI writing tool.</label>
+                <p class="error" id="certify-error" hidden></p>
+              </div>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="agree" name="agree_terms" value="yes" required aria-describedby="agree-error">
+              <div class="check-body">
+                <label for="agree">I have read and agree to the <a href="terms.html" target="_blank" rel="noopener">Terms of Service and Official Rules</a> and the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>. If I am under 18, my parent or guardian has given me permission to apply.</label>
+                <p class="error" id="agree-error" hidden></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="submit-row">
+            <button type="submit" class="btn btn-primary">Submit application</button>
+            <p class="submit-note">Applications cannot be edited after submission.</p>
+          </div>
+
+          <p class="form-status" id="form-status" role="alert" hidden></p>
+        </form>
+
+        <div class="confirmation" id="confirmation" tabindex="-1" hidden>
+          <h2>Application received</h2>
+          <p>Thank you<span id="confirm-name"></span>. Your application for the Accelerated Academic Award Scholarship has been submitted.</p>
+          <p>The selection committee will review all eligible essays after the application period closes on December 31, 2026. The winner will be notified by email by January 29, 2027.</p>
+          <p><a href="index.html">Return to the scholarship home page</a></p>
+        </div>
+      </div>
+
+      <aside>
+        <div class="sticky">
+          <div class="side-box side-box-accent">
+            <h2>The award</h2>
+            <p class="side-amount">$1.39</p>
+            <p>Paid in 139 U.S. pennies to one recipient.</p>
+          </div>
+          <div class="side-box">
+            <h2>Deadline</h2>
+            <p><strong>December 31, 2026</strong><br>11:59 p.m. Eastern Time</p>
+          </div>
+          <div class="side-box">
+            <h2>Before you begin</h2>
+            <ul>
+              <li>Draft your essay somewhere else first.</li>
+              <li>Count it more than once.</li>
+              <li>Use an email address you check regularly.</li>
+            </ul>
+            <p>Questions? Read the <a href="faq.html">FAQ</a> or email <a href="mailto:scholarship@weekendbio.com">scholarship@weekendbio.com</a>.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">Weekend<span>Bio</span></p>
+          <p>Accelerated Academic Award Scholarship</p>
+          <p class="footer-funder">Funded by <strong>The Joseph Coolidge Giving Association</strong></p>
+        </div>
+        <div>
+          <h2>Scholarship</h2>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="essay.html">The Essay</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="apply.html">Apply</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Policies</h2>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="mailto:scholarship@weekendbio.com">scholarship@weekendbio.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-legal">© 2026 WeekendBio. All rights reserved. WeekendBio never charges a fee to apply for this scholarship.</p>
+    </div>
+  </footer>
+</body>
+</html>
